@@ -1,0 +1,15 @@
+python -m venv venv
+venv\Scripts\activate     # For Windows
+pip install fastapi
+pip install "uvicorn[standard]"
+pip install opencv-python
+pip install opencv-contrib-python
+pip install face_recognition
+pip install numpy
+pip install python-multipart
+pip install dlib
+pip install imutils
+pip install scipy
+pip install cmake
+pip install dlib‑19.22.99‑cp310‑cp310‑win_amd64.whl  # Use correct version from https://www.lfd.uci.edu/~gohlke/pythonlibs/
+uvicorn main:app --reload
