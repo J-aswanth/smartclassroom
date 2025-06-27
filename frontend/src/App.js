@@ -12,7 +12,7 @@ const ClassroomApp = () => {
       {page === 'home' && <Home onStart={() => setpage('mode')} />}
       {page === 'mode' && <ModeSelect onSelect={setpage} />}
       {page === 'register' && <Registration />}
-      {page === 'attendance' && <Attendance />}
+      {page === 'attendance' && <Attendance onSelect={setpage} />} 
     </>
   );
 };
