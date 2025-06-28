@@ -4,6 +4,15 @@ A React-based interface for a smart classroom system that supports student regis
 
 ---
 
+
+## 👨‍💻 Built With
+
+- **ReactJS**
+- **React Router**
+- **React Webcam**
+- **HTML5 + CSS3**
+
+
 ## 🚀 Features
 
 - 🎥 **Webcam-based student face capture**
@@ -50,9 +59,3 @@ A React-based interface for a smart classroom system that supports student regis
 
 ---
 
-## 👨‍💻 Built With
-
-- **ReactJS**
-- **React Router**
-- **React Webcam**
-- **HTML5 + CSS3**
