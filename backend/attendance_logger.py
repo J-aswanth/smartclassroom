@@ -8,15 +8,17 @@ def initialize_csv():
     if not os.path.exists(csv_file):
         with open(csv_file, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Name', 'Timestamp', 'Status'])
+            writer.writerow(['Name', 'Date', 'Timestamp', 'Status'])
 
 def log_attendance(name, status):
-    timestamp = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+    now = datetime.now()
+    timestamp = now.strftime('%Y-%m-%d %H:%M:%S')
+    date = now.strftime('%Y-%m-%d')
 
     with open(csv_file, mode='a', newline='') as file:
         writer = csv.writer(file)
-        writer.writerow([name, timestamp, status])
-    print(f"✅ Logged attendance for {name} at {timestamp}")
+        writer.writerow([name, date, timestamp, status])
+    print(f"✅ Logged attendance for {name} on {date} at {timestamp}")
 
 def already_marked_today(name):
     if not os.path.exists(csv_file):
@@ -26,11 +28,12 @@ def already_marked_today(name):
 
     with open(csv_file, mode='r') as file:
         reader = csv.DictReader(file)
-        if 'Name' not in reader.fieldnames or 'Timestamp' not in reader.fieldnames:
+        if 'Name' not in reader.fieldnames or 'Date' not in reader.fieldnames:
             print("⚠️ CSV headers missing or corrupted.")
-            return False
+            return False  # Safeguard to prevent crash
 
         for row in reader:
-            if row['Name'] == name and row['Timestamp'].startswith(today):
+            if row['Name'] == name and row['Date'] == today:
                 return True
     return False
+
