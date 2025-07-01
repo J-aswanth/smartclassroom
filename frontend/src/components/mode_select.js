@@ -20,11 +20,14 @@ const ModeSelect = () => {
         <div className="left-content">
           <h2>Select Mode</h2>
           <div className="mode">
+            <button className="mode-button" onClick={() => navigate('/register')}>
+              Registration Mode
+            </button>
             <button className="mode-button" onClick={() => navigate('/attendance')}>
               Attendance Mode
             </button>
-            <button className="mode-button" onClick={() => navigate('/register')}>
-              Registration Mode
+            <button className="mode-button" onClick={() => navigate('/monitor')}>
+              Monitoring Mode
             </button>
 
             {role === 'student' && (
