@@ -20,7 +20,7 @@ const Home = () => {
           <h1>Welcome to Smart Classroom</h1>
           <div className="role-buttons">
             <button onClick={() => handleStart('student')}>Student</button>
-            <button onClick={() => handleStart('teacher')}>Teacher</button>
+            <button onClick={() => handleStart('instructor')}>Instructor</button>
           </div>
         </div>
 
