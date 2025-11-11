@@ -93,7 +93,7 @@ Saved in `attendance.csv` with the following format:
 
 ```
 Name,Date,Time,Status
-Priyanka,2025-06-24,09:15:12,Present
+Malla Jaswanth,2025-06-24,09:15:12,Present
 ```
 
 ---
